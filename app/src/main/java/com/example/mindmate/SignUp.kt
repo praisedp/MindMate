@@ -9,24 +9,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class LogIn : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_log_in)
+        setContentView(R.layout.activity_sign_up)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val gotoSignUpText = findViewById<TextView>(R.id.alreadyAccountText)
-        gotoSignUpText.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
-            // Use a custom animation: sign-up page slides in from left while login page slides out to right.
-            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, R.anim.slide_out_left)
+        // navigate to the Login screen.
+        val gotoLoginText = findViewById<TextView>(R.id.gotoLoginText)
+        gotoLoginText.setOnClickListener {
+            val intent = Intent(this, LogIn::class.java)
+            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_left, R.anim.slide_out_right)
             startActivity(intent, options.toBundle())
-            finish() // Optionally finish the login activity
+            finish() // Optionally finish the SignUp activity
         }
     }
 }
