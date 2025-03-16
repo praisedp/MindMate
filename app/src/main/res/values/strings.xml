@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MindMate</string>
+    <string name="back_button_text">&lt;&lt; Back</string>
+    <string name="front_button_text">Next &gt;&gt;</string>
 </resources>
