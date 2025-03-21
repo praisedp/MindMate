@@ -1,0 +1,6 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Circle background with no tint override -->
+    <item android:tint="@null" android:drawable="@drawable/ic_circle" />
+    <!-- The white home icon on top -->
+    <item android:tint="@null" android:drawable="@drawable/ic_home_white" />
+</layer-list>

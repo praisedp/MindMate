@@ -11,14 +11,14 @@
     <!-- Guideline at 50% of screen height -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_half"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintGuide_percent="0.59"
         android:orientation="horizontal" />
 
     <ImageView
         android:id="@+id/onboardingImage"
-        android:layout_width="414dp"
+        android:layout_width="match_parent"
         android:layout_height="599dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"

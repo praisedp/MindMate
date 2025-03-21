@@ -18,7 +18,7 @@
 
     <ImageView
         android:id="@+id/onboardingImage"
-        android:layout_width="414dp"
+        android:layout_width="match_parent"
         android:layout_height="599dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
