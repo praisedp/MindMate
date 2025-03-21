@@ -8,11 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomePage : AppCompatActivity() {
+class Meditate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home_page)
+        setContentView(R.layout.activity_meditate)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -20,8 +20,8 @@ class HomePage : AppCompatActivity() {
         }
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        // Set the default selected item to home
-        bottomNavigation.selectedItemId = R.id.nav_home
+        // Set the default selected item to the Meditate icon
+        bottomNavigation.selectedItemId = R.id.nav_play
 
         bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -36,6 +36,5 @@ class HomePage : AppCompatActivity() {
                 else -> false
             }
         }
-
     }
 }

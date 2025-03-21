@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Meditate"
+    android:background="@color/white">
+
+    <!-- Top static elements -->
+
+    <!-- Vertical ScrollView for all content between search and bottom nav -->
+
+    <TextView
+        android:id="@+id/greetingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Meditate"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="358dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/search_bar_background"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawableEnd="@android:drawable/ic_btn_speak_now"
+        android:drawablePadding="8dp"
+        android:hint="Search"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollableContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="170dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Container for all scrollable content -->
+        <LinearLayout
+            android:id="@+id/scrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Favorites Image -->
+            <ImageView
+                android:id="@+id/favourites"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/favourites" />
+
+            <!-- Daily Calm Section -->
+            <ImageView
+                android:id="@+id/dailyCalmImage"
+                android:layout_width="370dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dailycalm2" />
+
+
+            <!-- Med Cards Section -->
+            <LinearLayout
+                android:id="@+id/medCardContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="7dp"
+                android:orientation="horizontal">
+
+                <!-- Med Card 1 -->
+                <FrameLayout
+                    android:id="@+id/medCard1Container"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp">
+
+                    <ImageView
+                        android:id="@+id/medCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/medcard1" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/startButtonMedCard1"
+                        android:layout_width="67dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/start_button_background1"
+                        android:backgroundTint="@null"
+                        android:padding="0dp"
+                        android:text="START"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        app:backgroundTint="@null" />
+                </FrameLayout>
+
+                <!-- Med Card 2 -->
+                <FrameLayout
+                    android:id="@+id/medCard2Container"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/medCard2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/medcard2" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/startButtonMedCard2"
+                        android:layout_width="67dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/start_button_background2"
+                        android:backgroundTint="@null"
+                        android:padding="0dp"
+                        android:text="START"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        app:backgroundTint="@null" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Check Mode Section -->
+            <FrameLayout
+                android:id="@+id/checkModeContainer"
+                android:layout_width="375dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/checkModeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/checkmood" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startButtonCheckMode"
+                    android:layout_width="67dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="205dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/start_button_background1"
+                    android:backgroundTint="@null"
+                    android:text="START"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    app:backgroundTint="@null" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation (Static) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_nav_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@null"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
