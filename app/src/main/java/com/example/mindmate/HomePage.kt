@@ -19,18 +19,23 @@ class HomePage : AppCompatActivity() {
             insets
         }
 
+
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        // Set the default selected item to home
+        // Set Home as selected
         bottomNavigation.selectedItemId = R.id.nav_home
 
         bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
-                    startActivity(Intent(this, HomePage::class.java))
+                    // Already on HomePage
                     true
                 }
                 R.id.nav_play -> {
                     startActivity(Intent(this, Meditate::class.java))
+                    true
+                }
+                R.id.nav_moon -> {
+                    startActivity(Intent(this, SleepPage::class.java))
                     true
                 }
                 else -> false

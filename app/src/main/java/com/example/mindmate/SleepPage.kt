@@ -8,21 +8,20 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Meditate : AppCompatActivity() {
+class SleepPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_meditate)
+        setContentView(R.layout.activity_sleep_page)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        // Set Meditate as selected
-        bottomNavigation.selectedItemId = R.id.nav_play
+        // Set Sleep as selected
+        bottomNavigation.selectedItemId = R.id.nav_moon
 
         bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -31,15 +30,17 @@ class Meditate : AppCompatActivity() {
                     true
                 }
                 R.id.nav_play -> {
-                    // Already on Meditate
+                    startActivity(Intent(this, Meditate::class.java))
                     true
                 }
                 R.id.nav_moon -> {
-                    startActivity(Intent(this, SleepPage::class.java))
+                    // Already on SleepPage
                     true
                 }
                 else -> false
             }
         }
+
+
     }
 }
