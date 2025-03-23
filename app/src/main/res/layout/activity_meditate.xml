@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="11dp">
 
             <!-- Favorites Image -->
             <ImageView
@@ -91,8 +91,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
+
                 android:gravity="center_horizontal"
-                android:layout_marginStart="7dp"
+                android:layout_marginStart="14dp"
                 android:orientation="horizontal">
 
                 <!-- Med Card 1 -->
@@ -162,8 +163,9 @@
             <!-- Check Mode Section -->
             <FrameLayout
                 android:id="@+id/checkModeContainer"
-                android:layout_width="375dp"
-                android:layout_height="180dp"
+                android:layout_width="390dp"
+                android:layout_height="190dp"
+                android:padding="10dp"
                 android:layout_marginTop="16dp">
 
                 <ImageView
