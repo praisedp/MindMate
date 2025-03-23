@@ -45,5 +45,17 @@ class Meditate : AppCompatActivity() {
                 else -> false
             }
         }
+
+        // In Meditate.kt, inside onCreate()
+        val medStartButton1 = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.startButtonMedCard1)
+        val medStartButton2 = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.startButtonMedCard2)
+
+        medStartButton1.setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+
+        medStartButton2.setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
     }
 }

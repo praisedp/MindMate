@@ -2,6 +2,7 @@ package com.example.mindmate
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -44,6 +45,29 @@ class HomePage : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        // Inside HomePage.kt, in onCreate():
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn15min).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn15min_card2).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+
+// If you want the entire recommended card to be clickable (for example, card1Image, card2Image, etc.)
+        findViewById<ImageView>(R.id.card1Image).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+        findViewById<ImageView>(R.id.card2Image).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+        findViewById<ImageView>(R.id.card3Image).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
+        findViewById<ImageView>(R.id.card4Image).setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
         }
 
     }

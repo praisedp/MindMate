@@ -44,6 +44,11 @@ class SleepPage : AppCompatActivity() {
                 else -> false
             }
         }
+        // In SleepPage.kt, inside onCreate()
+        val sleepStartButton = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.startButtonOceanMoon)
+        sleepStartButton.setOnClickListener {
+            startActivity(Intent(this, Music::class.java))
+        }
 
 
     }

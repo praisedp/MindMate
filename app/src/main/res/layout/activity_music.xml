@@ -5,6 +5,102 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/musicback"
     tools:context=".Music">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/musicImg"
+        android:layout_width="330dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="152dp"
+        android:src="@drawable/musicimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/playSeekBar"
+        android:layout_width="410dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="56dp"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/musicImg" />
+
+    <ImageView
+        android:id="@+id/seekerTimeImage"
+        android:layout_width="392dp"
+        android:layout_height="30dp"
+        android:src="@drawable/seekbartime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playSeekBar" />
+
+    <ImageView
+        android:id="@+id/playPauseButton"
+        android:layout_width="295dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/playcontroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playSeekBar" />
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playPauseButton" />
+
+
+    <ImageView
+        android:id="@+id/soundDownImage"
+        android:layout_width="29dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="376dp"
+        android:src="@drawable/sounddown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playSeekBar" />
+
+    <ImageView
+        android:id="@+id/soundUpImage"
+        android:layout_width="29dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/soundup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playSeekBar" />
+
+    <ImageView
+        android:id="@+id/musicOther"
+        android:layout_width="238dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/musicother"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
