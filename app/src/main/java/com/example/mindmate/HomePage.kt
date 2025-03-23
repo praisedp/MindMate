@@ -70,5 +70,9 @@ class HomePage : AppCompatActivity() {
             startActivity(Intent(this, Music::class.java))
         }
 
+        // In HomePage.kt, inside onCreate(), after setContentView(...)
+        findViewById<ImageView>(R.id.dailyThoughtImage).setOnClickListener {
+            startActivity(Intent(this, Course::class.java))
+        }
     }
 }
