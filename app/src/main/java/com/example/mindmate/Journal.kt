@@ -8,21 +8,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Meditate : AppCompatActivity() {
+class Journal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_meditate)
+        setContentView(R.layout.activity_journal)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-
+        // Initialize BottomNavigationView
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        // Set Meditate as selected
-        bottomNavigation.selectedItemId = R.id.nav_play
+        // Set Journal (nav_book) as the selected item
+        bottomNavigation.selectedItemId = R.id.nav_book
 
         bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -31,7 +31,7 @@ class Meditate : AppCompatActivity() {
                     true
                 }
                 R.id.nav_play -> {
-                    // Already on Meditate
+                    startActivity(Intent(this, Meditate::class.java))
                     true
                 }
                 R.id.nav_moon -> {
@@ -39,7 +39,7 @@ class Meditate : AppCompatActivity() {
                     true
                 }
                 R.id.nav_book -> {
-                    startActivity(Intent(this, Journal::class.java))
+                    // Already on Journal page
                     true
                 }
                 else -> false

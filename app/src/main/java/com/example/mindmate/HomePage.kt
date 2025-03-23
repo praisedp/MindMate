@@ -38,6 +38,10 @@ class HomePage : AppCompatActivity() {
                     startActivity(Intent(this, SleepPage::class.java))
                     true
                 }
+                R.id.nav_book -> {
+                    startActivity(Intent(this, Journal::class.java))
+                    true
+                }
                 else -> false
             }
         }

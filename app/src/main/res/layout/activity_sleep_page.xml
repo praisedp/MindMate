@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Meditate"
+        android:text="Sleep"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -92,12 +92,12 @@
                     android:layout_height="33dp"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/start_button_background1"
+                    android:background="@drawable/start_button_background2"
                     android:backgroundTint="@null"
                     app:backgroundTint="@null"
                     android:text="START"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="11sp" />
             </FrameLayout>
 

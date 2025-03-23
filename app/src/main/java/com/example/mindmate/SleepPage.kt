@@ -37,6 +37,10 @@ class SleepPage : AppCompatActivity() {
                     // Already on SleepPage
                     true
                 }
+                R.id.nav_book -> {
+                    startActivity(Intent(this, Journal::class.java))
+                    true
+                }
                 else -> false
             }
         }
