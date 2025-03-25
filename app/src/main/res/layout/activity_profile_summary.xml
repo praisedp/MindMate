@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSummary"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="66dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="172dp"
+        android:contentDescription="Profile icon"
+        android:src="@drawable/profilepic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <ImageView
+        android:id="@+id/settingsIcon"
+        android:layout_width="26dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="Settings"
+        android:src="@drawable/settings_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Praise DP"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileIcon" />
+
+    <ScrollView
+        android:id="@+id/scrollableContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/profileName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/scrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Summary Text -->
+            <TextView
+                android:id="@+id/textSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summary"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Progress Image -->
+            <ImageView
+                android:id="@+id/progressImage"
+                android:layout_width="388dp"
+                android:layout_height="207dp"
+                android:src="@drawable/progress"
+                android:layout_marginBottom="16dp"
+                 />
+
+            <!-- Sleep Text -->
+            <TextView
+                android:id="@+id/sleepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleep"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Sleepbars Image -->
+            <ImageView
+                android:id="@+id/sleepbarsImage"
+                android:layout_width="404dp"
+                android:layout_height="299dp"
+                android:src="@drawable/sleepbars"
+                android:layout_marginBottom="16dp"
+                 />
+
+            <!-- Sleeptime Image -->
+            <ImageView
+                android:id="@+id/sleeptimeImage"
+                android:layout_width="385dp"
+                android:layout_height="131dp"
+                android:src="@drawable/sleeptime"
+                 />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

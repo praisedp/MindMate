@@ -74,5 +74,11 @@ class HomePage : AppCompatActivity() {
         findViewById<ImageView>(R.id.dailyThoughtImage).setOnClickListener {
             startActivity(Intent(this, Course::class.java))
         }
+
+        // In HomePage.kt, inside onCreate()
+        val profileIcon = findViewById<ImageView>(R.id.profileIcon)
+        profileIcon.setOnClickListener {
+            startActivity(Intent(this, ProfileSummary::class.java))
+        }
     }
 }
