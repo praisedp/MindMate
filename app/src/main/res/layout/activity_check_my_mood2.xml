@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckMyMood2"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="What’s Bothering You?"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+    <LinearLayout
+        android:id="@+id/buttonsListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText">
+
+        <!-- Row 1: Insomnia and Anxiety -->
+        <LinearLayout
+            android:id="@+id/buttonRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/insomniaButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Insomnia"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/anxietyButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Anxiety"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <!-- Row 2: Sadness and Stress -->
+        <LinearLayout
+            android:id="@+id/buttonRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sadnessButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Sadness"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stressButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Stress"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <!-- Row 3: Uncertainty and Laziness -->
+        <LinearLayout
+            android:id="@+id/buttonRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/uncertaintyButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Uncertainty"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lazinessButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Laziness"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <!-- Row 4: Anger and Apathy -->
+        <LinearLayout
+            android:id="@+id/buttonRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/angerButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Anger"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apathyButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Apathy"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <!-- Row 5: Envy and Other -->
+        <LinearLayout
+            android:id="@+id/buttonRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/envyButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Envy"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/otherButton"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/insomnia_background"
+                android:backgroundTint="@null"
+                android:checkable="true"
+                android:text="Other"
+                android:textColor="@color/insomnia_text_color"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/continue_button_selector"
+        android:backgroundTint="@null"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#996E6E" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
