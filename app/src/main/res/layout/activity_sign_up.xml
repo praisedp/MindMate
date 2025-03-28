@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Create Your Account"
+        android:text="@string/sign_up_title"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,39 +38,33 @@
         android:layout_height="63dp"
         android:layout_marginTop="268dp"
         android:background="@drawable/input_background"
-        android:hint="Enter your name"
+        android:hint="@string/enter_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingStart="16dp"/>
 
-    <!-- Password Input -->
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="374dp"
         android:layout_height="63dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/input_background"
-        android:hint="Email"
+        android:hint="@string/email_hint"
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameEditText" />
 
-    <!-- Privacy Policy Checkbox -->
-
-    <!-- Email Sign Up Button -->
-
-    <!-- Sign Up with Apple Button -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="374dp"
         android:layout_height="63dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/input_background"
-        android:hint="Password"
+        android:hint="@string/password_hint"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,14 +72,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEditText" />
 
-    <!-- Apple Logo for Sign Up Button -->
     <CheckBox
         android:id="@+id/privacyPolicyCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="I agree to the Privacy Policy"
-        android:textColor="#A1A4B2"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/gray"
         android:textSize="14sp"
         android:buttonTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,8 +92,8 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/continue_button_selector"
         android:backgroundTint="@null"
-        android:text="Sign Up"
-        android:textColor="#FFFFFF"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
         android:textSize="17sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,9 +108,9 @@
         android:background="@drawable/apple_button_background"
         android:backgroundTint="@null"
         android:paddingStart="48dp"
-        android:text="Sign up with Apple"
+        android:text="@string/apple_sign_up"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="17sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +129,6 @@
         app:layout_constraintStart_toStartOf="@id/appleSignUpButton"
         android:layout_marginStart="12dp" />
 
-    <!-- Sign Up with Google Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/googleSignUpButton"
         android:layout_width="248dp"
@@ -144,16 +137,15 @@
         android:background="@drawable/google_button_background"
         android:backgroundTint="@null"
         android:paddingStart="48dp"
-        android:text="Sign up with Google"
+        android:text="@string/google_sign_up"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="17sp"
         app:backgroundTint="@null"
         app:layout_constraintTop_toBottomOf="@id/appleSignUpButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Google Logo for Sign Up Button -->
     <ImageView
         android:id="@+id/googleLogoImageView"
         android:layout_width="24dp"
@@ -165,16 +157,14 @@
         app:layout_constraintStart_toStartOf="@id/googleSignUpButton"
         android:layout_marginStart="12dp" />
 
-    <!-- Navigate to Login Page Text -->
-
     <TextView
         android:id="@+id/forgotPasswordText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
         android:gravity="center"
-        android:text="Or"
-        android:textColor="#A1A4B2"
+        android:text="@string/or_text"
+        android:textColor="@color/gray"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -185,8 +175,8 @@
         android:id="@+id/gotoLoginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account? Log in"
-        android:textColor="#A1A4B2"
+        android:text="@string/goto_login"
+        android:textColor="@color/gray"
         android:textSize="14sp"
         android:clickable="true"
         android:linksClickable="true"

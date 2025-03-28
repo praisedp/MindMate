@@ -4,4 +4,5 @@
     <item android:state_checked="true" android:color="#000000" />
     <!-- Default state: white text -->
     <item android:color="#FFFFFF" />
+
 </selector>

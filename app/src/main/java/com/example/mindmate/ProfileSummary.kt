@@ -1,5 +1,6 @@
 package com.example.mindmate
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -24,5 +25,10 @@ class ProfileSummary : AppCompatActivity() {
             finish() // This will close the ProfileSummary activity and go back to the previous page.
         }
 
+        // In ProfileSummary.kt (or whichever activity uses activity_profile_summary.xml)
+        val settingsIcon = findViewById<ImageView>(R.id.settingsIcon)
+        settingsIcon.setOnClickListener {
+            startActivity(Intent(this, Profile::class.java))
+        }
     }
 }

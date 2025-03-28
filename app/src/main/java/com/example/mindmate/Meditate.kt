@@ -2,6 +2,7 @@ package com.example.mindmate
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -60,6 +61,11 @@ class Meditate : AppCompatActivity() {
         }
         findViewById<ImageView>(R.id.dailyCalmImage).setOnClickListener {
             startActivity(Intent(this, Course::class.java))
+        }
+
+        val startButtonCheckMoodCard = findViewById<Button>(R.id.startButtonCheckMode)
+        startButtonCheckMoodCard.setOnClickListener {
+            startActivity(Intent(this, CheckMyMood2::class.java))
         }
     }
 }

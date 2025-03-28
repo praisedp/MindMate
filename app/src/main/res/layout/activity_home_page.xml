@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomePage"
-    android:background="@color/white">
+    android:background="@color/primary">
 
     <!-- Profile Image -->
 
@@ -79,11 +79,9 @@
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp">
 
-            <!-- Use a ConstraintLayout inside the CardView for flexible positioning -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <!-- Inside the ConstraintLayout of card1, insert this TextView above the button -->
                 <TextView
                     android:id="@+id/card1Title2"
                     android:layout_width="wrap_content"
@@ -96,9 +94,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-                <!-- Other content inside the card can go here -->
 
-                <!-- 15 min Button anchored at the bottom center -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn15min"
                     android:layout_width="146.85dp"
@@ -129,7 +125,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <!-- Add this TextView inside card2's ConstraintLayout, above the button -->
                 <TextView
                     android:id="@+id/cardTitle"
                     android:layout_width="wrap_content"
@@ -406,7 +401,7 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bottom_nav_background"
+        android:background="@color/primary"
         app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="@null"
         app:labelVisibilityMode="unlabeled"

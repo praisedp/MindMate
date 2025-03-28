@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- primary color-->
+    <color name="primary">#FAF7F2</color>
+
+    <!--Secondary colors -->
+    <color name="secondary">#E9F6FF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- accent colors -->
+    <color name="ash">#EBEAEC</color>
+    <color name="dark_blue">#03174D</color>
+    <color name="search_bar_tint">#1F2E59</color>
+    <color name="onboarding_subtitle_color">#A1A4B2</color>
+    <color name="ripple_color">#996E6E</color>
+    <color name="accent_color">#5F94AE</color>
+    <color name="light_gray">#D9D9D9</color>
+    <color name="gray">#B0B0B0</color>
 </resources>

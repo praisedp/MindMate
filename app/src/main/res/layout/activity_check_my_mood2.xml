@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CheckMyMood2"
-    android:background="@color/white">
+    android:background="@color/primary">
 
     <ImageView
         android:id="@+id/backButton"
@@ -242,14 +242,14 @@
         android:layout_marginBottom="44dp"
         android:background="@drawable/continue_button_selector"
         android:backgroundTint="@null"
-        android:text="Continue"
-        android:textColor="#FFFFFF"
+        android:text="@string/continue_text"
+        android:textColor="@color/white"
         android:textSize="17sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#996E6E" />
+        app:rippleColor="@color/ripple_color" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

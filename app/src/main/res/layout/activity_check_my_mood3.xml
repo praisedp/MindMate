@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".CheckMyMood3">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="We have Saved Your \nMood"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+    <!-- Med Cards Section -->
+
+    <TextView
+        android:id="@+id/recommendedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Here are some suggestions"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText" />
+
+    <!-- Daily Calm Section -->
+
+    <LinearLayout
+        android:id="@+id/medCardContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!-- Med Card 1 -->
+        <FrameLayout
+            android:id="@+id/medCard1Container"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/medCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/medcard1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startButtonMedCard1"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/start_button_background1"
+                android:backgroundTint="@null"
+                android:padding="0dp"
+                android:text="START"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                app:backgroundTint="@null" />
+        </FrameLayout>
+
+        <!-- Med Card 2 -->
+        <FrameLayout
+            android:id="@+id/medCard2Container"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/medCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/medcard2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startButtonMedCard2"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/start_button_background2"
+                android:backgroundTint="@null"
+                android:padding="0dp"
+                android:text="START"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:backgroundTint="@null" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dailyCalmImage"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="308dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dailycalm2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText" />
+
+    <ImageView
+        android:id="@+id/dailyThoughtImage"
+        android:layout_width="379dp"
+        android:layout_height="134dp"
+        android:src="@drawable/dailythought"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyCalmImage"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/dailyThoughtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Thought"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/dailyThoughtImage"
+        app:layout_constraintEnd_toEndOf="@id/dailyThoughtImage"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="@id/dailyThoughtImage"
+        app:layout_constraintTop_toTopOf="@id/dailyThoughtImage"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <TextView
+        android:id="@+id/meditationInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="MEDITATION : 3 - 10 MIN"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/dailyThoughtImage"
+        app:layout_constraintEnd_toEndOf="@id/dailyThoughtImage"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="@id/dailyThoughtImage"
+        app:layout_constraintTop_toBottomOf="@+id/dailyThoughtText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/continue_button_selector"
+        android:backgroundTint="@null"
+        android:text="Done"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#996E6E" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

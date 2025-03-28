@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -36,6 +37,16 @@ class LogIn : AppCompatActivity() {
             val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, R.anim.slide_out_left)
             startActivity(intent, options.toBundle())
             finish() // Optionally finish this activity
+        }
+
+        // Navigate to Onboarding screen when "Sign in with Apple" is clicked
+        findViewById<AppCompatButton>(R.id.appleSignInButton).setOnClickListener {
+            startActivity(Intent(this, OnboardingScreen1::class.java))
+        }
+
+        // Navigate to Onboarding screen when "Sign in with Google" is clicked
+        findViewById<AppCompatButton>(R.id.googleSignInButton).setOnClickListener {
+            startActivity(Intent(this, OnboardingScreen1::class.java))
         }
     }
 }

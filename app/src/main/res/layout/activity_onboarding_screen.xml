@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Welcome To MindMate"
+        android:text="@string/onboarding_welcome_text"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,9 +41,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:text="Embrace tranquility and balance your mind.  MindMate offers personalized meditation sessions,  mood tracking, and self-care guidance to help  you navigate daily stress and cultivate  lasting well-being"
+        android:text="@string/onboarding_description"
         android:textAlignment="center"
-        android:textColor="#B0B0B0"
+        android:textColor="@color/gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,13 +58,13 @@
         android:layout_marginBottom="44dp"
         android:background="@drawable/continue_button_selector"
         android:backgroundTint="@null"
-        android:text="Continue"
-        android:textColor="#FFFFFF"
+        android:text="@string/continue_text"
+        android:textColor="@color/white"
         android:textSize="17sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#996E6E" />
+        app:rippleColor="@color/ripple_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
